@@ -1,0 +1,4 @@
+level select
+crush
+moving platforms
+touch controls
