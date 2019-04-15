@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/User/UnityProjects/PaletteTest/FinalTest/PaletteRun.apk
+C:/Users/User/UnityProjects/PaletteRun/UIElementsSchema/PaletteRun.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Endless.unity
