@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1393955ddc6fac645932defdeaf1cbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: LevelSelect
+  nextLevelName: Endless
 --- !u!1 &1330927332
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E3B5D37E-D2F3-A85A-5F5F-A91624292FB9}</ProjectGuid>
+    <ProjectGuid>{2487D5D7-D23F-9082-D551-41800411AFC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,35 +53,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BlockBehavior.cs" />
-     <Compile Include="Assets\BlockTrigger.cs" />
-     <Compile Include="Assets\CameraController.cs" />
-     <Compile Include="Assets\CharacterController2D.cs" />
-     <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\Goal.cs" />
-     <Compile Include="Assets\KillZone.cs" />
-     <Compile Include="Assets\MainMenu.cs" />
-     <Compile Include="Assets\NextLevel.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\SceneFader.cs" />
+     <Compile Include="Assets\Scripts\BlockBehavior.cs" />
+     <Compile Include="Assets\Scripts\BlockTrigger.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Goal.cs" />
+     <Compile Include="Assets\Scripts\KillZone.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\NextLevel.cs" />
+     <Compile Include="Assets\Scripts\Obstacle.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SceneFader.cs" />
+     <Compile Include="Assets\Scripts\SegmentDestroyer.cs" />
+     <Compile Include="Assets\Scripts\SegmentGenerator.cs" />
+     <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\UltraMare\Minimalist Cartoon UI Pack\Scripts\MyCursor.cs" />
      <Compile Include="Assets\UltraMare\Minimalist Cartoon UI Pack\Scripts\StatsExample.cs" />
      <None Include="Assets\PaletteToDo.txt" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -282,13 +286,13 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.6f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/User/UnityProjects/PaletteAndroid/Palette/FinalTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/PaletteRun/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -638,7 +642,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{276B7AC9-4B99-4CEF-F36D-9E199A4F65F1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CDAF2F4A-4753-D1F4-2FA1-6493E969B90B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

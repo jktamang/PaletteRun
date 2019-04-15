@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Level.unity
-    guid: d37eab8225962c940a9710ea35a44ced
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -20,13 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ecfa8d7ad0d83a94abcad271ac32507a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/RainbowRungs.unity
-    guid: 8a1314a0c5f2c7f4dad343fc484fb320
-  - enabled: 1
-    path: Assets/Scenes/LevelSelect.unity
-    guid: bb32e16940e35de489b602415d607cd5
-  - enabled: 1
-    path: Assets/Scenes/IntroLevel.unity
-    guid: 7eb44241b8335b849850366f058e34f0
+    path: Assets/Scenes/Endless.unity
+    guid: d32f449c12739604a841c7a92c0ffb2d
   m_configObjects: {}
