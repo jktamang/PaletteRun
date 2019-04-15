@@ -1,4 +1,4 @@
-How to install Pallete Run:
+How to install Palette Run:
 
 
 Download PaletteRun.apk

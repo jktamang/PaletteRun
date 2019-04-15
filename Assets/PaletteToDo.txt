@@ -1,4 +1,5 @@
-level select
-crush
-moving platforms
-touch controls
+pause menu
+music
+score
+rules
+better level segments lol
