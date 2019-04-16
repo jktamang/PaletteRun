@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SceneFader.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SegmentDestroyer.cs" />
      <Compile Include="Assets\Scripts\SegmentGenerator.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />

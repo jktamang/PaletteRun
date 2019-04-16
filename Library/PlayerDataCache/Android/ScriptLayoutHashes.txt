@@ -123,7 +123,6 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Obstacle
 a8b6c919b2049fcc280823488144371f Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SegmentDestroyer
-4a807d522f80c96bc8775ab4ee67c9ef Assembly-CSharp.dll:.MyCursor
 4bd1cc3c85989d2213a9a8fd9d09e63f Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fdd7177da17032ba94d98037cc97bb49 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
 210e0e474228c07b13b54f621540a56a Assembly-CSharp.dll:.SegmentGenerator
@@ -179,5 +178,5 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-413dcd74064bce0e98442abd93aa724b Assembly-CSharp.dll:.StatsExample
 edf0b3a60b934a550566974ead0b5b43 Assembly-CSharp.dll:.PlayerMovement
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ScoreManager
