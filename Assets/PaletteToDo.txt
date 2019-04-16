@@ -1,5 +1,15 @@
+/score
+/store high score
+/better colliders
+/score continues after falling
+/slowing down on ceiling
+
 pause menu
 music
-score
 rules
 better level segments lol
+
+store high score as hash
+changing color while inside
+third color
+difficulty weights

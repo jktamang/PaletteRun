@@ -5,22 +5,52 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    // float score;
+    int score;
+    int currentHighScore;
     int initialPositionX;
     GameObject body;
     Text scoreDisplay;
+    Text highScoreDisplay;
     
     void Start()
     {
+        currentHighScore = PlayerPrefs.GetInt("HighScore", 0);
         scoreDisplay = GameObject.Find("Score").GetComponent<Text>();
+        highScoreDisplay = GameObject.Find("HighScore").GetComponent<Text>();
         body = GameObject.Find("Body");
         initialPositionX = (int)body.transform.position.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        scoreDisplay.text = ((int)body.transform.position.x - initialPositionX).ToString();
+        score = (int)body.transform.position.x - initialPositionX;
+        scoreDisplay.text = score.ToString();
+        StoreHighScore();
+        highScoreDisplay.text = currentHighScore.ToString();
+
+    }
+
+    public void StoreHighScore()
+    {
+        if (IsHighScore())
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+            currentHighScore = score;
+        }
+    }
+
+    public bool IsHighScore()
+    {
+        return score > currentHighScore;
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public int GetHighScore()
+    {
+        return PlayerPrefs.GetInt("HighScore", 0);
     }
 }
