@@ -10,4 +10,4 @@ How to play Palette Run on desktop:
 - Download PaletteRunDesktopBuild.zip
 - Extract contents into new folder
 - Run "Palette Run.exe"
-- Choose "1024*768" for the resolution and check "Windowed"
+- Choose "1280*720" for the resolution and check "Windowed"
