@@ -3,13 +3,18 @@
 /better colliders
 /score continues after falling
 /slowing down on ceiling
+/sound effects
+/changing color while inside
+/no repeating segments
 
+mandatory:
 pause menu
 music
-rules
-better level segments lol
-
-store high score as hash
-changing color while inside
-third color
 difficulty weights
+
+optional:
+store high score as hash
+third color
+control scheme
+better level segments lol
+rules

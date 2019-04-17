@@ -30,8 +30,11 @@ public class CharacterController2D : MonoBehaviour
     private const int LAYER_BLUE = 9;
     private const int LAYER_BLUE_TRIGGER = 13;
     private const int LAYER_RED_TRIGGER = 14;
-    private bool isToggleColorValid = true;
     private List<Collider2D> TriggerList = new List<Collider2D>();
+    private bool isToggleQueued = false;
+
+    AudioSource jumpSound;
+    AudioSource tockSound;
 
     [Header("Events")]
     [Space]
@@ -54,6 +57,10 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
+
+        AudioSource[] sources = GetComponents<AudioSource>();
+        jumpSound = sources[0];
+        tockSound = sources[1];
     }
 
     private void FixedUpdate()
@@ -95,7 +102,7 @@ public class CharacterController2D : MonoBehaviour
             m_GroundCheck.gameObject.layer = LAYER_RED;
             isRed = true;
         }
-
+        tockSound.Play();
     }
 
     public void Move(float move, bool crouch, bool jump)
@@ -166,6 +173,7 @@ public class CharacterController2D : MonoBehaviour
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            jumpSound.Play();
         }
     }
 
@@ -205,6 +213,11 @@ public class CharacterController2D : MonoBehaviour
         {
             TriggerList.Remove(col);
         }
+        if (isToggleQueued)
+        {
+            ToggleColor();
+            isToggleQueued = false;
+        }
     }
 
     public bool canToggleColor()
@@ -218,4 +231,10 @@ public class CharacterController2D : MonoBehaviour
         }
         return true;
     }
+
+    public void QueueToggleColor()
+    {
+        isToggleQueued = true;
+    }
+
 }

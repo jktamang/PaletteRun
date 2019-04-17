@@ -8,6 +8,7 @@ public class SegmentGenerator : MonoBehaviour
     // [SerializeField] GameObject currentSegment;
     GameObject generationPoint;
     float distanceBetween;
+    int previousSegment = 0;
 
     [SerializeField] GameObject[] segments;
 
@@ -31,7 +32,12 @@ public class SegmentGenerator : MonoBehaviour
         {
             //insert weights for segments
             int r = Random.Range(1, segments.Length);
+            while (r == previousSegment)
+            {
+                r = Random.Range(1, segments.Length);
+            }
             SpawnSegment(r);
+            previousSegment = r;
         }
     }
 }

@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.ToggleColor();
         }
+        else if (isColorToggleCalled)
+        {
+            controller.QueueToggleColor();
+        }
         isColorToggleCalled = false;
     }
 

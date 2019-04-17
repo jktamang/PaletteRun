@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
         controlsUI = GameObject.Find("ControlsUI");
 
         gameOverUI.SetActive(false);
+        #if !MOBILE_INPUT
+            controlsUI.SetActive(false);
+        #endif
     }
 
     public void showGameOverUI()
