@@ -11,10 +11,13 @@ mandatory:
 pause menu
 music
 difficulty weights
+white spikes
+different scrolling background
+logo
+better level segments lol
 
 optional:
 store high score as hash
 third color
 control scheme
-better level segments lol
 rules
