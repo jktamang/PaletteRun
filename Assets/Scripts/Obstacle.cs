@@ -12,11 +12,11 @@ public class Obstacle : MonoBehaviour
         uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
-    IEnumerator GameOver()
+    void GameOver()
     {
-        yield return new WaitForSeconds(0.2f);
         uiManager.showGameOverUI();
-        GameObject.Find("Main Camera").GetComponent<AudioSource>().volume = 0.3f;
+        Time.timeScale = 0.0f;
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().volume = 0.2f;
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -24,12 +24,8 @@ public class Obstacle : MonoBehaviour
         if (col.gameObject.name.Equals("Body") && !gameOver)
         {
             gameOver = true;
-            GameObject body = GameObject.Find("Body");
-            body.GetComponent<PlayerMovement>().enabled = false;
-            body.GetComponent<CharacterController2D>().enabled = false;
-            body.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-            GameObject.Find("Main Camera").GetComponent<CameraController>().SetInactive();
-            StartCoroutine(GameOver());
+            col.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            GameOver();
         }
     }
 }

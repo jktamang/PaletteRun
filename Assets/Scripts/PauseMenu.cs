@@ -55,7 +55,7 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         controlsUI.SetActive(false);
         Time.timeScale = 0f;
-        bgMusic.volume = 0.3f;
+        bgMusic.volume = 0.2f;
         isGamePaused = true;
     }
 }

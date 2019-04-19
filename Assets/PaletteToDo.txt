@@ -17,15 +17,17 @@
 
 mandatory:
 object pooling for segments
+ads
+donate
 
 optional:
 store high score as hash
 third color
 control scheme
-rules
 chill mode
 power up
 more level segments
 segment difficulty weights
 different scrolling background
 credits
+extra life when watch ads? donated?

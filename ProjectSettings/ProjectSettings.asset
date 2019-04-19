@@ -597,8 +597,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   scriptingDefineSymbols:
     1: CROSS_PLATFORM_INPUT
-    4: CROSS_PLATFORM_INPUT
-    7: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     14: MOBILE_INPUT
   platformArchitecture: {}
   scriptingBackend: {}
@@ -690,10 +690,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 30b00cc1-8354-4230-8bb5-516930df9262
+  cloudProjectId: 7d715cfc-a7c6-48f5-b345-88434c0e4609
   framebufferDepthMemorylessMode: 0
-  projectName: Palette
-  organizationId: unity_pzj7epappmhnog
+  projectName: Palette Run
+  organizationId: unity_-0sfcnzyjhipxq
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
