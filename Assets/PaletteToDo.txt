@@ -8,16 +8,24 @@
 /no repeating segments
 /white spikes
 /logo
+/coins
+/new segments
+/pause menu
+/score layout
+/button art
+/music
 
 mandatory:
-pause menu
-music
-difficulty weights
-different scrolling background
-better level segments lol
+object pooling for segments
 
 optional:
 store high score as hash
 third color
 control scheme
 rules
+chill mode
+power up
+more level segments
+segment difficulty weights
+different scrolling background
+credits

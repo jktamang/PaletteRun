@@ -16,6 +16,7 @@ public class Obstacle : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         uiManager.showGameOverUI();
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().volume = 0.3f;
     }
 
     void OnCollisionEnter2D(Collision2D col)

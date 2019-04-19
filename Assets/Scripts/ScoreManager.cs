@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     int score;
+    int coinScore = 0;
     int currentHighScore;
     int initialPositionX;
     GameObject body;
@@ -23,7 +24,7 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        score = (int)body.transform.position.x - initialPositionX;
+        score = ((int)body.transform.position.x - initialPositionX) + coinScore;
         scoreDisplay.text = score.ToString();
         StoreHighScore();
         highScoreDisplay.text = currentHighScore.ToString();
@@ -52,5 +53,10 @@ public class ScoreManager : MonoBehaviour
     public int GetHighScore()
     {
         return PlayerPrefs.GetInt("HighScore", 0);
+    }
+
+    public void ScoreCoin()
+    {
+        coinScore += 20;
     }
 }

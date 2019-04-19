@@ -201,7 +201,8 @@ public class CharacterController2D : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!TriggerList.Contains(col))
+        if (!TriggerList.Contains(col) &&
+            !col.gameObject.name.Equals("coin"))
         {
             TriggerList.Add(col);
         }
