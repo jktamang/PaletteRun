@@ -19,6 +19,8 @@ mandatory:
 object pooling for segments
 ads
 donate
+better art direction
+tighter jumping
 
 optional:
 store high score as hash
