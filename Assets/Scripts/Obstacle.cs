@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour
 
     void GameOver()
     {
-        uiManager.showGameOverUI();
+        uiManager.ShowGameOverUI();
         Time.timeScale = 0.0f;
         GameObject.Find("Main Camera").GetComponent<AudioSource>().volume = 0.2f;
     }

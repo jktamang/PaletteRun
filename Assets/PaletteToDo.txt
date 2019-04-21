@@ -14,6 +14,10 @@
 /score layout
 /button art
 /music
+/audio toggle
+/fixed mobile controls showing after unpausing in desktop build
+/refactored pauseManager and UIManager
+/issue where desktop players can control character while paused
 
 mandatory:
 object pooling for segments
@@ -21,6 +25,7 @@ ads
 donate
 better art direction
 tighter jumping
+more coins
 
 optional:
 store high score as hash

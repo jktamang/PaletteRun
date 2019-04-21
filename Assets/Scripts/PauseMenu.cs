@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
-    bool isGamePaused = false;
-    GameObject pauseUI;
-    GameObject controlsUI;
-    AudioSource bgMusic;
+    private bool isGamePaused = false;
+    private GameObject pauseUI;
+    private GameObject controlsUI;
+    private GameObject continueBtn;
+    private AudioSource bgMusic;
+    private UIManager uiManager;
+    private PlayerMovement movement;
 
     void Start()
     {
-        pauseUI = GameObject.Find("PauseUI");
-        pauseUI.SetActive(false);
-        controlsUI = GameObject.Find("ControlsUI");
-
+        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         bgMusic = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        movement = GameObject.Find("Body").GetComponent<PlayerMovement>();
 
         Time.timeScale = 1f;
     }
@@ -43,19 +45,19 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
-        pauseUI.SetActive(false);
-        controlsUI.SetActive(true);
+        uiManager.HidePauseUI();
         Time.timeScale = 1f;
         bgMusic.volume = 1f;
         isGamePaused = false;
+        movement.enabled = true;
     }
 
     void Pause()
     {
-        pauseUI.SetActive(true);
-        controlsUI.SetActive(false);
+        uiManager.ShowPauseUI();
         Time.timeScale = 0f;
         bgMusic.volume = 0.2f;
         isGamePaused = true;
+        movement.enabled = false;
     }
 }
