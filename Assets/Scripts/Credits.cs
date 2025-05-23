@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Alchemy.Inspector;
 
 public class Credits : MonoBehaviour
 {
-    GameObject creditsText;
+    [SerializeField] GameObject creditsText;
     bool showCredits = false;
 
     void Start()
     {
-        creditsText = GameObject.Find("Credits");
         creditsText.SetActive(false);
     }
 

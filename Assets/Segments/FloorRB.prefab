@@ -1791,11 +1791,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5502324845142766913}
     m_Modifications:
-    - target: {fileID: 9061891034509607957, guid: 46b6cc1e228060749aa9a6fcf5871698,
-        type: 3}
-      propertyPath: m_Name
-      value: coin
-      objectReference: {fileID: 0}
     - target: {fileID: 2684160196670258977, guid: 46b6cc1e228060749aa9a6fcf5871698,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1850,6 +1845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061891034509607957, guid: 46b6cc1e228060749aa9a6fcf5871698,
+        type: 3}
+      propertyPath: m_Name
+      value: coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46b6cc1e228060749aa9a6fcf5871698, type: 3}
