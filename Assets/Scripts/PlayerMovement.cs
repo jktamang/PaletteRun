@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public ScoreManager scoreManager;
+    public UIManager uiManager;
     float horizontalMove = 0f;
     public float runSpeed = 40f;
     public float baseRunSpeed = 40f;
@@ -36,10 +37,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!CanMove()) return;
         hasJumped = CrossPlatformInputManager.GetButtonDown("Jump");
         isColorToggleCalled = CrossPlatformInputManager.GetButtonDown("ToggleColor");
 
         Move();
         ToggleColor();
     }
+
+    bool CanMove()
+    {
+        return !uiManager.IsRulesActive() && !uiManager.IsGameOverActive() && !uiManager.IsPauseActive();
+	}
 }

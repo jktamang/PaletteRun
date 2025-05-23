@@ -108,4 +108,19 @@ public class UIManager : MonoBehaviour
             controlsUI.SetActive(true);
         #endif
     }
+
+    public bool IsRulesActive()
+    {
+        return rulesUI.activeInHierarchy;
+	}
+
+    public bool IsPauseActive()
+    {
+        return pauseUI.activeInHierarchy;
+	}
+
+    public bool IsGameOverActive()
+    {
+        return gameOverUI.activeInHierarchy;
+	}
 }
