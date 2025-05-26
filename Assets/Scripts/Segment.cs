@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SegmentProperties : MonoBehaviour
+public class Segment : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -13,7 +13,7 @@ public class SegmentProperties : MonoBehaviour
         Split
     };
 
-    [SerializeField] int SegmentLength;
+    [SerializeField] public int SegmentLength = 18;
     [SerializeField] Type StartType;
     [SerializeField] Type EndType;
 

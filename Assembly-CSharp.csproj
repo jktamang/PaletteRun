@@ -59,7 +59,7 @@
     <Analyzer Include="C:\Unity\PaletteRun\Library\PackageCache\com.annulusgames.alchemy@3f8d35f6d2\Generator\Alchemy.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SegmentProperties.cs" />
+    <Compile Include="Assets\Scripts\Segment.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />

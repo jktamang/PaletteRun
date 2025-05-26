@@ -1379,6 +1379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5502324845142766913}
   - component: {fileID: 5244757892272260208}
+  - component: {fileID: -3475548809644802333}
   m_Layer: 0
   m_Name: TwoLevelBRB
   m_TagString: Untagged
@@ -1416,6 +1417,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83e3d651a197a14bbfece14b5c831d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3475548809644802333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502324845142766914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106f2ff29a232374ba5ecb7fde67bb5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SegmentLength: 18
+  StartType: 0
+  EndType: 0
 --- !u!1 &5502324845264017853
 GameObject:
   m_ObjectHideFlags: 0
