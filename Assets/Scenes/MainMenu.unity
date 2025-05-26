@@ -1070,7 +1070,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Spacebar = Jump
 
-    Q = Change Player Color
+    Q/P = Change Player Color
 
     Esc  = Pause'
 --- !u!222 &1384254648

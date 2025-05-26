@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {   
-        runSpeed = baseRunSpeed + Mathf.Min(Mathf.Floor(scoreManager.GetScore() / 100.0f), 30.0f);
+        runSpeed = baseRunSpeed + Mathf.Min(Mathf.Floor(scoreManager.GetScore() / 200.0f), 20.0f);
         controller.Move(runSpeed * Time.fixedDeltaTime, false, hasJumped);
         hasJumped = false;
     }
@@ -38,8 +38,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!CanMove()) return;
+        //Project Settings > Input Manager
         hasJumped = CrossPlatformInputManager.GetButtonDown("Jump");
-        isColorToggleCalled = CrossPlatformInputManager.GetButtonDown("ToggleColor");
+        isColorToggleCalled = CrossPlatformInputManager.GetButtonDown("ToggleColor") || CrossPlatformInputManager.GetButtonDown("ToggleColor2");
 
         Move();
         ToggleColor();
