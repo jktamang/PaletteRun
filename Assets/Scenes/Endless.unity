@@ -518,8 +518,8 @@ MonoBehaviour:
   controller: {fileID: 292157405}
   scoreManager: {fileID: 1234780132}
   uiManager: {fileID: 1127520490}
-  runSpeed: 47
-  baseRunSpeed: 40
+  baseRunSpeed: 45
+  maxRunSpeed: 70
 --- !u!58 &292157411
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1944,6 +1944,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 574443683}
     m_Modifications:
+    - target: {fileID: 40353156027138749, guid: d6050d54e6572e54293dc8b0cc31c109,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.0008545
+      objectReference: {fileID: 0}
     - target: {fileID: 40353156542386756, guid: d6050d54e6572e54293dc8b0cc31c109,
         type: 3}
       propertyPath: m_RootOrder
@@ -2026,7 +2031,12 @@ PrefabInstance:
     - target: {fileID: 1069526265529139145, guid: 607493195f63f254c9af06cf69d076ea,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.3999939
+      value: -1.4000244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069526265529139145, guid: 607493195f63f254c9af06cf69d076ea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.100006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 607493195f63f254c9af06cf69d076ea, type: 3}
@@ -2086,6 +2096,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 574443683}
     m_Modifications:
+    - target: {fileID: 4167602260122834955, guid: 5f29d410e3a06cd43b8e7b12c2062a23,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.0008545
+      objectReference: {fileID: 0}
     - target: {fileID: 4167602260122834955, guid: 5f29d410e3a06cd43b8e7b12c2062a23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
