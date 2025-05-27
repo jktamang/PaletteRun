@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     private GameObject mobileRules;
     private GameObject desktopRules;
     private GameObject rulesToggle;
+    public SpeedUpUI speedUpUI;
     private Text audioButtonText;
     private AudioManager audioManager;
     private bool shouldShowRules;
@@ -40,6 +41,7 @@ public class UIManager : MonoBehaviour
 
         pauseUI.SetActive(false);
         gameOverUI.SetActive(false);
+        speedUpUI.gameObject.SetActive(false);
 
         #if MOBILE_INPUT
             desktopRules.SetActive(false);
