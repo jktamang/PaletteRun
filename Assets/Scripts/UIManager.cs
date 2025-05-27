@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     private Text audioButtonText;
     private AudioManager audioManager;
     private bool shouldShowRules;
+    public GameManager gm;
 
     void Start()
     {
@@ -102,7 +103,7 @@ public class UIManager : MonoBehaviour
             PlayerPrefs.SetInt("shouldShowRules", 0);
         }
 
-        Time.timeScale = 1f;
+        Time.timeScale = gm.currentTimeScale;
         rulesUI.SetActive(false);
         #if MOBILE_INPUT
             controlsUI.SetActive(true);

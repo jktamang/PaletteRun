@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {   
-        runSpeed = Mathf.Min(baseRunSpeed + Mathf.Floor(scoreManager.GetScore() / 200.0f), maxRunSpeed);
+        //runSpeed = Mathf.Min(baseRunSpeed + Mathf.Floor(scoreManager.GetScore() / 200.0f), maxRunSpeed);
         controller.Move(runSpeed * Time.fixedDeltaTime, false, hasJumped);
         hasJumped = false;
     }

@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     private AudioSource bgMusic;
     private UIManager uiManager;
     private PlayerMovement movement;
+    public GameManager gm;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class PauseMenu : MonoBehaviour
         bgMusic = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         movement = GameObject.Find("Body").GetComponent<PlayerMovement>();
 
-        Time.timeScale = 1f;
+        Time.timeScale = gm.currentTimeScale;
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     void Resume()
     {
         uiManager.HidePauseUI();
-        Time.timeScale = 1f;
+        Time.timeScale = gm.currentTimeScale;
         bgMusic.volume = 1f;
         isGamePaused = false;
         movement.enabled = true;

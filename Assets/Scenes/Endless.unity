@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94ccdeee120594b881ca5873dec03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 459182816}
 --- !u!4 &111729056
 Transform:
   m_ObjectHideFlags: 0
@@ -518,7 +519,7 @@ MonoBehaviour:
   controller: {fileID: 292157405}
   scoreManager: {fileID: 1234780132}
   uiManager: {fileID: 1127520490}
-  baseRunSpeed: 45
+  baseRunSpeed: 47
   maxRunSpeed: 70
 --- !u!58 &292157411
 CircleCollider2D:
@@ -876,6 +877,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &459182814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459182815}
+  - component: {fileID: 459182816}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &459182815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459182814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459182816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459182814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6977699180d1cf4bace142b0de31cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTimeScale: 1
+  maxTimeScale: 2.5
+  timeScaleStep: 0.1
+  scoreManager: {fileID: 1234780132}
+  uiManager: {fileID: 1127520490}
 --- !u!1 &466712823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18847ae0edc87ae4ca2637873e45ff3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 459182816}
 --- !u!4 &1127520491
 Transform:
   m_ObjectHideFlags: 0
@@ -1998,6 +2049,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RulesUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1069526264546988731, guid: 607493195f63f254c9af06cf69d076ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1069526264546988732, guid: 607493195f63f254c9af06cf69d076ea,
         type: 3}
       propertyPath: m_RootOrder
@@ -2051,6 +2107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ControlsUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232480026525802104, guid: 2f3df126506023945ac3082ca910263a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2232480026525802111, guid: 2f3df126506023945ac3082ca910263a,
         type: 3}
