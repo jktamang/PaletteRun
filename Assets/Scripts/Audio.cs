@@ -1,22 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Audio : MonoBehaviour
 {
-    AudioManager audioManager;
-
+    [SerializeField] TextMeshProUGUI audioButtonText;
     void Start()
     {
-        audioManager =
-            GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void Click()
     {
-        Text audioButtonText = transform.Find("Text").GetComponent<Text>();
-        audioManager.ToggleAudio();
-        audioButtonText.text = audioManager.GetAudioButtonText();
+        AudioManager.instance.ToggleAudio();
+        audioButtonText.text = AudioManager.instance.GetAudioButtonText();
     }
 }

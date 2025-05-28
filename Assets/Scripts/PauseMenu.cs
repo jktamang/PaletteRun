@@ -1,27 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityEngine.EventSystems;
+using TMPro;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : SimpleSingleton<PauseMenu>
 {
     private bool isGamePaused = false;
-    private GameObject pauseUI;
-    private GameObject controlsUI;
-    private GameObject continueBtn;
-    private AudioSource bgMusic;
-    private UIManager uiManager;
-    private PlayerMovement movement;
-    public GameManager gm;
+    [SerializeField] AudioSource bgMusic;
+    [SerializeField] PlayerMovement movement;
+
+    [SerializeField] TextMeshProUGUI audioButtonText;
 
     void Start()
     {
-        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-        bgMusic = GameObject.Find("Main Camera").GetComponent<AudioSource>();
-        movement = GameObject.Find("Body").GetComponent<PlayerMovement>();
-
-        Time.timeScale = gm.currentTimeScale;
+        Time.timeScale = GameManager.instance.currentTimeScale;
     }
 
     void Update()
@@ -46,8 +37,8 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
-        uiManager.HidePauseUI();
-        Time.timeScale = gm.currentTimeScale;
+        UIManager.instance.HidePauseUI();
+        Time.timeScale = GameManager.instance.currentTimeScale;
         bgMusic.volume = 1f;
         isGamePaused = false;
         movement.enabled = true;
@@ -55,7 +46,8 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        uiManager.ShowPauseUI();
+        UIManager.instance.ShowPauseUI();
+        audioButtonText.text = AudioManager.instance.GetAudioButtonText();
         Time.timeScale = 0f;
         bgMusic.volume = 0.2f;
         isGamePaused = true;

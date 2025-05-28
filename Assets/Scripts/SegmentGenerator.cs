@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class SegmentGenerator : MonoBehaviour
+public class SegmentGenerator : SimpleSingleton<SegmentGenerator>
 {
     // [SerializeField] GameObject currentSegment;
     GameObject generationPoint;

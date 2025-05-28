@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    PauseMenu pause;
     void Start()
     {
-        pause = GameObject.Find("PauseManager").GetComponent<PauseMenu>();
     }
 
     public void Click()
     {
-        pause.TogglePause();
+        PauseMenu.instance.TogglePause();
     }
 }

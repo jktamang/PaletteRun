@@ -1,25 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using TMPro;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : SimpleSingleton<ScoreManager>
 {
     int score;
     int coinScore = 0;
     int currentHighScore;
     int initialPositionX;
-    GameObject body;
-    Text scoreDisplay;
-    Text highScoreDisplay;
+    int previousHighScore;
+    [SerializeField] GameObject body;
+    [SerializeField] TextMeshProUGUI scoreDisplay;
+    [SerializeField] TextMeshProUGUI highScoreDisplay;
     
     void Start()
     {
         currentHighScore = PlayerPrefs.GetInt("HighScore", 0);
-        scoreDisplay = GameObject.Find("Score").GetComponent<Text>();
-        highScoreDisplay = GameObject.Find("HighScore").GetComponent<Text>();
-        body = GameObject.Find("Body");
         initialPositionX = (int)body.transform.position.x;
+        previousHighScore = currentHighScore;
     }
 
     void Update()
@@ -28,7 +25,6 @@ public class ScoreManager : MonoBehaviour
         scoreDisplay.text = score.ToString();
         StoreHighScore();
         highScoreDisplay.text = currentHighScore.ToString();
-
     }
 
     public void StoreHighScore()
@@ -59,4 +55,9 @@ public class ScoreManager : MonoBehaviour
     {
         coinScore += 20;
     }
+
+    public bool GotNewHighScore()
+    {
+        return score > previousHighScore;
+	}
 }

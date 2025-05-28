@@ -96,6 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1069526264546988732}
+  - component: {fileID: 3748233172631446940}
   m_Layer: 5
   m_Name: RulesUI
   m_TagString: Untagged
@@ -130,6 +131,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3748233172631446940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069526264546988731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa58a3aa4d0467347b4b3a4bd33cdc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desktopRules: {fileID: 1069526265292508451}
+  mobileRules: {fileID: 1069526265840932926}
+  rulesToggle: {fileID: 1069526264470085569}
+  closeRulesBtn: {fileID: 1069526264801037624}
 --- !u!1 &1069526264657816431
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +422,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1069526264801037626}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Click
+      - m_Target: {fileID: 3748233172631446940}
+        m_TargetAssemblyTypeName: RulesUI, Assembly-CSharp
+        m_MethodName: HideRules
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -625,8 +642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.4000015, y: 10.099998}
-  m_SizeDelta: {x: 563.9, y: 206.2}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1069526265529139147
 CanvasRenderer:

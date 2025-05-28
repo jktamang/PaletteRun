@@ -7,3 +7,6 @@ Logs
 UserSettings
 /apk/*.apk
 Executable
+/Assembly-CSharp-firstpass.csproj
+/Assembly-CSharp.csproj
+/Assembly-CSharp-Editor-firstpass.csproj

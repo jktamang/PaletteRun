@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SegmentDestroyer : MonoBehaviour
+public class SegmentDestroyer : SimpleSingleton<SegmentDestroyer>
 {
     GameObject destroyPoint;
 
