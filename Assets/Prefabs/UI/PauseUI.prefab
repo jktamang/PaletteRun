@@ -777,6 +777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94ccdeee120594b881ca5873dec03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusic: {fileID: 0}
+  movement: {fileID: 0}
   audioButtonText: {fileID: 4545002920906282390}
 --- !u!1 &179383237628423011
 GameObject:
