@@ -12,7 +12,6 @@ public class GameManager : SimpleSingleton<GameManager>
 
     void Start()
     {
-        Application.targetFrameRate = 60;
         currentThreshold = 0;
     }
 
