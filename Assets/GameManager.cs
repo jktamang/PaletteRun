@@ -12,6 +12,7 @@ public class GameManager : SimpleSingleton<GameManager>
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         currentThreshold = 0;
     }
 
@@ -19,24 +20,26 @@ public class GameManager : SimpleSingleton<GameManager>
     void Update()
     {
         if (UIManager.instance.IsRulesActive()) return;
-        if (UIManager.instance.IsPauseActive()) return;
 
-        currentTimeScale = 1.0f + (GetScaleMultiplier() * timeScaleStep);
-        Time.timeScale = currentTimeScale;
         if (CrossPlatformInputManager.GetButtonDown("Cancel"))
         {
             PauseMenu.instance.TogglePause();
         }
+
+        if (UIManager.instance.IsPauseActive()) return;
+
+        UpdateTimeScale();
     }
 
-    int GetScaleMultiplier()
+    void UpdateTimeScale()
     {
-        if (currentThreshold >= scoreThreshold.Length) return 10;
+        if (currentThreshold >= scoreThreshold.Length) return;
         if (ScoreManager.instance.GetScore() > scoreThreshold[currentThreshold])
         {
             currentThreshold++;
             SpeedUpUI.instance.Trigger();
+            currentTimeScale = 1.0f + (currentThreshold * timeScaleStep);
+            Time.timeScale = currentTimeScale;
         }
-        return currentThreshold;
     }
 }

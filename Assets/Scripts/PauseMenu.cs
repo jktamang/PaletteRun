@@ -12,15 +12,10 @@ public class PauseMenu : SimpleSingleton<PauseMenu>
 
     void Start()
     {
-        Time.timeScale = GameManager.instance.currentTimeScale;
     }
 
     void Update()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Cancel"))
-        {
-            TogglePause();
-        }
     }
 
     public void TogglePause()

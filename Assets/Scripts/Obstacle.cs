@@ -5,16 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
-    UIManager uiManager;
     bool gameOver = false;
     void Start()
     {
-        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
     void GameOver()
     {
-        uiManager.ShowGameOverUI();
+        UIManager.instance.ShowGameOverUI();
         Time.timeScale = 0.0f;
         GameObject.Find("Main Camera").GetComponent<AudioSource>().volume = 0.2f;
     }
