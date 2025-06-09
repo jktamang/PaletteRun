@@ -13,8 +13,8 @@ public class UIManager : SimpleSingleton<UIManager>
     void Start()
     {
         PauseMenu.instance.gameObject.SetActive(false);
-        GameOverUI.instance.Show(false);
         SpeedUpUI.instance.gameObject.SetActive(false);
+        GameOverUI.instance.Show(false);
 
         #if !MOBILE_INPUT
             controlsUI.SetActive(false);
