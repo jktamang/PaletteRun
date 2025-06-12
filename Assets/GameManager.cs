@@ -9,7 +9,7 @@ public class GameManager : SimpleSingleton<GameManager>
 
     [SerializeField]
     public int[] scoreThreshold = {200, 300, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000};
-    int currentThreshold = 0;
+    public int currentThreshold = 0;
 
     void Start()
     {
@@ -27,6 +27,10 @@ public class GameManager : SimpleSingleton<GameManager>
         if (UIManager.instance.IsRulesActive()) return;
         if (UIManager.instance.IsGameOverActive()) return;
         if (CrossPlatformInputManager.GetButtonDown("Cancel"))
+        {
+            PauseMenu.instance.TogglePause();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button9))
         {
             PauseMenu.instance.TogglePause();
         }

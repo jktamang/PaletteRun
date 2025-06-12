@@ -16,6 +16,7 @@ public class Segment : MonoBehaviour
     [SerializeField] public int SegmentLength = 18;
     [SerializeField] Type StartType;
     [SerializeField] Type EndType;
+    [SerializeField] public int difficulty = 0;
 
     void Start()
     {

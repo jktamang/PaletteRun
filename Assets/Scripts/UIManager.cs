@@ -22,9 +22,9 @@ public class UIManager : SimpleSingleton<UIManager>
         
         RulesUI.instance.gameObject.SetActive(false);
 
-        shouldShowRules = PlayerPrefs.GetInt("shouldShowRules", 1) != 0;
+        //shouldShowRules = PlayerPrefs.GetInt("shouldShowRules", 1) != 0;
 
-        if (shouldShowRules)
+        //if (shouldShowRules)
             RulesUI.instance.ShowRules();
     }
 

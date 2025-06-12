@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (!CanMove()) return;
         //Project Settings > Input Manager
         hasJumped = CrossPlatformInputManager.GetButtonDown("Jump");
-        isColorToggleCalled = CrossPlatformInputManager.GetButtonDown("ToggleColor") || CrossPlatformInputManager.GetButtonDown("ToggleColor2");
+        isColorToggleCalled = CrossPlatformInputManager.GetButtonDown("ToggleColor");
 
         Move();
         ToggleColor();

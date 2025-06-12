@@ -6,6 +6,7 @@ public class RulesUI : SimpleSingleton<RulesUI>
 {
     [SerializeField] GameObject desktopRules;
     [SerializeField] GameObject mobileRules;
+    [SerializeField] GameObject controllerRules;
     [SerializeField] Toggle     rulesToggle;
     [SerializeField] GameObject closeRulesBtn;
     // Start is called before the first frame update
@@ -49,8 +50,11 @@ public class RulesUI : SimpleSingleton<RulesUI>
         isMobile = true;
         //ControlsUI.instance.gameObject.SetActive(false);
 #endif
-        desktopRules.SetActive(!isMobile);
-        mobileRules.SetActive(isMobile);
+        var controllers = Input.GetJoystickNames();
+        bool hasController = controllers.Length > 0;
+        desktopRules.SetActive(!isMobile && !hasController);
+        mobileRules.SetActive(isMobile && !hasController);
+        controllerRules.SetActive(hasController);
 
         EventSystem.current.SetSelectedGameObject(closeRulesBtn);
     }

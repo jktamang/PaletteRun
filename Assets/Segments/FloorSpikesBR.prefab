@@ -1242,6 +1242,7 @@ MonoBehaviour:
   SegmentLength: 21
   StartType: 0
   EndType: 0
+  difficulty: 3
 --- !u!1 &5502324845264017853
 GameObject:
   m_ObjectHideFlags: 0
