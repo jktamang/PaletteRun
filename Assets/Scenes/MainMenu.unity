@@ -1156,10 +1156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88ae332b11b798488c9771ffb536300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conventionTxt: {fileID: 4900000, guid: c76fcc65521f237448ea884f3f40321a, type: 3}
   controlsUI: {fileID: 1609876895}
   controllerUI: {fileID: 1230853958}
   startBtn: {fileID: 579111168}
   demoVideo: {fileID: 1546595521}
+  demoTimeout: 5
 --- !u!4 &727266736
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,7 +1212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30, y: -80.8}
+  m_AnchoredPosition: {x: -30, y: -80.79999}
   m_SizeDelta: {x: 160, y: 180}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &771210347

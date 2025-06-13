@@ -9,10 +9,9 @@ public class RulesUI : SimpleSingleton<RulesUI>
     [SerializeField] GameObject controllerRules;
     [SerializeField] Toggle     rulesToggle;
     [SerializeField] GameObject closeRulesBtn;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -28,9 +27,12 @@ public class RulesUI : SimpleSingleton<RulesUI>
 
     public void HideRules()
     {
-        if (!rulesToggle.isOn)
+        if (!GameManager.instance.conventionMode)
         {
-            PlayerPrefs.SetInt("shouldShowRules", 0);
+            if (!rulesToggle.isOn)
+            {
+                PlayerPrefs.SetInt("shouldShowRules", 0);
+            }
         }
 
         Time.timeScale = GameManager.instance.currentTimeScale;
@@ -55,6 +57,9 @@ public class RulesUI : SimpleSingleton<RulesUI>
         desktopRules.SetActive(!isMobile && !hasController);
         mobileRules.SetActive(isMobile && !hasController);
         controllerRules.SetActive(hasController);
+
+        if (GameManager.instance.conventionMode)
+            rulesToggle.gameObject.SetActive(false);
 
         EventSystem.current.SetSelectedGameObject(closeRulesBtn);
     }

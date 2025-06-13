@@ -5,14 +5,16 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class MainMenuUIManager : SimpleSingleton<MainMenuUIManager>
 {
-    // Start is called before the first frame update
+    [SerializeField] TextAsset conventionTxt;
+
     [SerializeField] GameObject controlsUI;
     [SerializeField] GameObject controllerUI;
     [SerializeField] GameObject startBtn;
     [SerializeField] VideoPlayer demoVideo;
 
     float demoTimer = 0.0f;
-    float demoTimeout = 30.0f;
+    [SerializeField] float demoTimeout = 30.0f;
+    bool conventionMode = false;
 
     void Start()
     {
@@ -29,6 +31,9 @@ public class MainMenuUIManager : SimpleSingleton<MainMenuUIManager>
         EventSystem.current.SetSelectedGameObject(startBtn);
 
         demoVideo.gameObject.SetActive(false);
+
+        conventionMode = conventionTxt.text.Equals("true");
+        Time.timeScale = 1.0f;
     }
 
     public void Quit()
@@ -38,14 +43,18 @@ public class MainMenuUIManager : SimpleSingleton<MainMenuUIManager>
 
 	private void Update()
 	{
-		if (!demoVideo.isPlaying)
+        if (!conventionMode) return;
+        Time.timeScale = 1.0f;
+        if (!demoVideo.isPlaying)
         {
             demoTimer += Time.deltaTime;
             if (demoTimer >= demoTimeout)
             {
                 demoVideo.gameObject.SetActive(true);
                 demoVideo.Play();
-			}
+                demoTimer = 0.0f;
+                EventSystem.current.SetSelectedGameObject(null);
+            }
 		}
         else
         {
@@ -53,8 +62,9 @@ public class MainMenuUIManager : SimpleSingleton<MainMenuUIManager>
             {
                 demoTimer = 0.0f;
                 demoVideo.gameObject.SetActive(false);
-                demoVideo.Pause();
-			}
+                demoVideo.Stop();
+                EventSystem.current.SetSelectedGameObject(startBtn);
+            }
 		}
 	}
 }

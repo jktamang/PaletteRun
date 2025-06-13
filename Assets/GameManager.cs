@@ -7,9 +7,13 @@ public class GameManager : SimpleSingleton<GameManager>
     public float timeScaleStep = 0.05f;
     [SerializeField] FPSManager fpsManager;
 
+    [SerializeField] TextAsset conventionTxt;
+
     [SerializeField]
     public int[] scoreThreshold = {200, 300, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000};
+    
     public int currentThreshold = 0;
+    public bool conventionMode = false;
 
     void Start()
     {
@@ -19,6 +23,7 @@ public class GameManager : SimpleSingleton<GameManager>
 #else
         fpsManager.gameObject.SetActive(false);
 #endif
+        conventionMode = conventionTxt.text.Equals("true");
     }
 
     // Update is called once per frame
