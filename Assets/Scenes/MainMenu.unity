@@ -1161,7 +1161,7 @@ MonoBehaviour:
   controllerUI: {fileID: 1230853958}
   startBtn: {fileID: 579111168}
   demoVideo: {fileID: 1546595521}
-  demoTimeout: 5
+  demoTimeout: 15
 --- !u!4 &727266736
 Transform:
   m_ObjectHideFlags: 0

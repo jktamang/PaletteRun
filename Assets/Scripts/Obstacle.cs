@@ -23,6 +23,7 @@ public class Obstacle : MonoBehaviour
         {
             gameOver = true;
             col.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            col.gameObject.GetComponent<PlayerMovement>().GameOver();
             GameOver();
         }
     }
