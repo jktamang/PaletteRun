@@ -30,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float blinkDuration = 0.5f;
 
+    [SerializeField] bool inMenu = false;
+    [SerializeField] GameObject destroyPoint;
+    [SerializeField] GameObject respawnPoint;
+    
+
 	private void Start()
 	{
 		lastYPos = gameObject.transform.localPosition.y;
@@ -40,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void Move()
     {
-        controller.Move(runSpeed * Time.fixedDeltaTime, false, hasJumped);
-        eyes.gameObject.transform.localPosition = new Vector3(0.0f, lastLastYPos - gameObject.transform.localPosition.y, 0.0f);
-        lastLastYPos = lastYPos;
+        if (!inMenu) controller.Move(runSpeed * Time.fixedDeltaTime, false, hasJumped);
+        eyes.gameObject.transform.localPosition = new Vector3(0.0f, lastYPos - gameObject.transform.localPosition.y, 0.0f);
+        //lastLastYPos = lastYPos;
         lastYPos = gameObject.transform.localPosition.y;
         hasJumped = false;
     }
@@ -70,10 +75,16 @@ public class PlayerMovement : MonoBehaviour
         Move();
         ToggleColor();
         Blink();
+
+        if (inMenu)
+        {
+            if (transform.position.y < destroyPoint.transform.position.y) transform.position = new Vector3(transform.position.x, respawnPoint.transform.position.y, transform.position.z);
+		}
     }
 
     bool CanMove()
     {
+        if (inMenu) return true;
         return !uiManager.IsRulesActive() && !uiManager.IsGameOverActive() && !uiManager.IsPauseActive();
 	}
 

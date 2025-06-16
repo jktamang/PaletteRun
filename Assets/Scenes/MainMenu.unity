@@ -261,7 +261,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 71}
-  m_SizeDelta: {x: 300, y: 200}
+  m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355012225
 MonoBehaviour:
@@ -1027,7 +1027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92.5, y: 30.1}
+  m_AnchoredPosition: {x: 101.2, y: 10.7}
   m_SizeDelta: {x: 50, y: 12.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714867556
@@ -1160,6 +1160,7 @@ MonoBehaviour:
   controlsUI: {fileID: 1609876895}
   controllerUI: {fileID: 1230853958}
   startBtn: {fileID: 579111168}
+  quitBtn: {fileID: 704491649}
   demoVideo: {fileID: 1546595521}
   demoTimeout: 15
 --- !u!4 &727266736

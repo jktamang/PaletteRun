@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 using TMPro;
 
 public class PauseMenu : SimpleSingleton<PauseMenu>
@@ -9,6 +9,7 @@ public class PauseMenu : SimpleSingleton<PauseMenu>
     [SerializeField] PlayerMovement movement;
 
     [SerializeField] TextMeshProUGUI audioButtonText;
+    [SerializeField] Slider volume;
 
     void Start()
     {
@@ -48,4 +49,14 @@ public class PauseMenu : SimpleSingleton<PauseMenu>
         isGamePaused = true;
         movement.enabled = false;
     }
+
+    public void SetVolumeSlider(float f)
+    {
+        volume.value = f;
+	}
+
+    public void OnSlideAudio()
+    {
+        AudioManager.instance.OnSlideAudio(volume.value);
+	}
 }

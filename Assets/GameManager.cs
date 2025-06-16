@@ -42,6 +42,14 @@ public class GameManager : SimpleSingleton<GameManager>
 
         if (UIManager.instance.IsPauseActive()) return;
 
+        if (Input.GetKeyDown(KeyCode.E) && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
+            UIManager.instance.genericPrompt.Show("Set High Score:", (string str) =>
+            {
+                int value = 0;
+                if (!int.TryParse(str, out value)) value = 0;
+                ScoreManager.instance.SetHighScore(value);
+            });
+
         UpdateTimeScale();
     }
 

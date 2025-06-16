@@ -10,6 +10,7 @@ public class MainMenuUIManager : SimpleSingleton<MainMenuUIManager>
     [SerializeField] GameObject controlsUI;
     [SerializeField] GameObject controllerUI;
     [SerializeField] GameObject startBtn;
+    [SerializeField] GameObject quitBtn;
     [SerializeField] VideoPlayer demoVideo;
 
     float demoTimer = 0.0f;
@@ -34,6 +35,9 @@ public class MainMenuUIManager : SimpleSingleton<MainMenuUIManager>
 
         conventionMode = conventionTxt.text.Equals("true");
         Time.timeScale = 1.0f;
+#if UNITY_WEBGL
+        quitBtn.SetActive(false);
+#endif
     }
 
     public void Quit()

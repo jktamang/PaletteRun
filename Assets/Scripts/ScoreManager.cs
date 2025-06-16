@@ -60,4 +60,10 @@ public class ScoreManager : SimpleSingleton<ScoreManager>
     {
         return score > previousHighScore;
 	}
+
+    public void SetHighScore(int i)
+    {
+        PlayerPrefs.GetInt("HighScore", i);
+        currentHighScore = i;
+    }
 }

@@ -8,6 +8,9 @@ public class UIManager : SimpleSingleton<UIManager>
     [SerializeField] GameObject continueBtn;
     [SerializeField] GameObject closeRulesBtn;
     [SerializeField] AudioManager audioManager;
+
+    public GenericPrompt genericPrompt;
+
     private bool shouldShowRules;
 
     void Start()
@@ -15,6 +18,7 @@ public class UIManager : SimpleSingleton<UIManager>
         PauseMenu.instance.gameObject.SetActive(false);
         SpeedUpUI.instance.gameObject.SetActive(false);
         GameOverUI.instance.Show(false);
+
 
         #if !MOBILE_INPUT
             controlsUI.SetActive(false);
